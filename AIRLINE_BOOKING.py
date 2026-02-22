@@ -134,4 +134,61 @@ def menu():
             print("Invalid choice. Please enter a number between 1 and 9.")
 
 menu()
+
 db.close()
+
+
+- SQL
+
+
+-- Create Database
+CREATE DATABASE booking_system;
+USE booking_system;
+
+-- Passenger Table
+CREATE TABLE passenger (
+    passenger_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    gender VARCHAR(10),
+    journey_date DATE
+);
+
+-- Travel Class Table
+CREATE TABLE ticket_class (
+    classid INT AUTO_INCREMENT PRIMARY KEY,
+    classname VARCHAR(50) NOT NULL,
+    price DECIMAL(10,2) NOT NULL
+);
+
+-- Food Table
+CREATE TABLE food (
+    food_id INT AUTO_INCREMENT PRIMARY KEY,
+    item_name VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL
+);
+
+-- Luggage Table
+CREATE TABLE luggage (
+    luggage_id INT AUTO_INCREMENT PRIMARY KEY,
+    weight INT NOT NULL,
+    rate DECIMAL(10,2) NOT NULL
+);
+
+-- Sample Data for ticket_class
+INSERT INTO ticket_class (classname, price) VALUES
+('Economy', 5000),
+('Business', 12000),
+('First Class', 20000);
+
+-- Sample Data for food
+INSERT INTO food (item_name, price) VALUES
+('Sandwich', 250),
+('Juice', 150),
+('Meal Combo', 500);
+
+-- Sample Data for luggage
+INSERT INTO luggage (weight, rate) VALUES
+(10, 100),
+(20, 150),
+(30, 200);
