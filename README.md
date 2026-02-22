@@ -22,6 +22,6 @@ FEATURES
 
 HOW TO RUN
 
-pip install mysql-connector-python
-python main.py
-connect with sql
+- pip install mysql-connector-python
+- python main.py
+- connect with sql
