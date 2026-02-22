@@ -2,7 +2,7 @@ import mysql.connector
 
 db = mysql.connector.connect(
     user='root',
-    password='Arsalaan@2020',
+    password='--',
     host='localhost',
     database="booking_system"
 )
@@ -192,3 +192,4 @@ INSERT INTO luggage (weight, rate) VALUES
 (10, 100),
 (20, 150),
 (30, 200);
+
